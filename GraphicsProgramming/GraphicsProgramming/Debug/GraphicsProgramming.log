@@ -1,0 +1,28 @@
+﻿  Main.cpp
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\model.h(31,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\camera.h(6,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Planet.cpp
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.cpp(22,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.cpp(23,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Scene.cpp
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.cpp(24,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\model.h(31,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\camera.h(6,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(47,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(52,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(54,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(58,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(155,108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(155,77): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(155,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(157,109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(157,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(157,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(159,106): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(159,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\GraphicsProgramming\Scene.cpp(159,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  GraphicsProgramming.vcxproj -> C:\Users\Fergus\Documents\CMP 203\Graphics progamming\GraphicsProgramming\Debug\GraphicsProgramming.exe

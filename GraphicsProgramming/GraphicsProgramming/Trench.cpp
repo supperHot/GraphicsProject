@@ -69,12 +69,10 @@ void Trench::render(){
 	glEnd();
 
 	//pre calculated shadows
-	glDisable(GL_LIGHT1);
-	glDisable(GL_LIGHT2);
-	glDisable(GL_LIGHT0);
+//	glDisable(GL_LIGHTING);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glColor4f(1.0, 1.0, 1.0, 0.6);
+	glColor4f(0.1, 0.1, 0.1, 0.8);
 	glBegin(GL_QUADS);
 	glVertex3f(0, 0.01, 0);
 	glVertex3f(4, 0.01, 0);
@@ -92,9 +90,7 @@ void Trench::render(){
 	glVertex3f(3.99, 0.0, 200);
 	glEnd();
 	glEnable(GL_BLEND);
-	glEnable(GL_LIGHT1);
-	glEnable(GL_LIGHT2);
-	glEnable(GL_LIGHT0);
+//	glEnable(GL_LIGHTING);
 
 
 }

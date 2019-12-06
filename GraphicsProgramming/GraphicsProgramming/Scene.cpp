@@ -4,11 +4,11 @@
 // Scene constructor, initilises OpenGL
 // You should add further variables to need initilised.
 
-Scene::Scene(Input *in)
+Scene::Scene(Input* in)
 {
 	// Store pointer for input class
 	input = in;
-		
+
 	//OpenGL settings
 	glShadeModel(GL_SMOOTH);							// Enable Smooth Shading
 	//glClearColor(0.0f, 0.0f, 0.0f, 0.0f);			// Cornflour Blue Background
@@ -21,7 +21,7 @@ Scene::Scene(Input *in)
 	glLightModelf(GL_LIGHT_MODEL_LOCAL_VIEWER, 1);
 
 	// Other OpenGL / render setting should be applied here.
-	
+
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_LIGHTING);
 
@@ -30,15 +30,15 @@ Scene::Scene(Input *in)
 	//texture variables
 
 
-	tie1->load("models/spaceship.obj","models/spaceship.png");
+	tie1->load("models/spaceship.obj", "models/spaceship.png");
 	tie2->load("models/spaceship.obj", "models/spaceship.png");
 	tie3->load("models/spaceship.obj", "models/spaceship.png");
 	xWing->load("models/spaceship.obj", "models/spaceship.png");
 
-	tie1->setPosition(0,0,0);
-	tie2->setPosition(2,0,0);
-	tie3->setPosition(2,2,0);
-	xWing->setPosition(0,2,0);
+	tie1->setPosition(0, 0, 0);
+	tie2->setPosition(2, 0, 0);
+	tie3->setPosition(2, 2, 0);
+	xWing->setPosition(0, 2, 0);
 
 	yavin->setPosition(0, 0, 0);
 	yavin->setQuality(50);
@@ -64,18 +64,19 @@ Scene::Scene(Input *in)
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
-	GLfloat Light_Ambient[] = { 0.3f, 0.3f, 0.3f, 1.0f };
-	glLightfv(GL_LIGHT2, GL_AMBIENT, Light_Ambient);
-
-	GLfloat Light_Diffuse[] = { 1.0f,1.0f,1.0f,1.0f };
-	GLfloat Light_Position[] = { -1.0f, 0.0f, 0.0f, 0.0f };
+	GLfloat Light_Ambient[] = {0.5f, 0.5f, 0.5f, 1.0f};
+	GLfloat Light_Diffuse[] = { 1.0f,0.0f,0.0f,1.0f };
+	GLfloat Light_Position[] = { 2.0f, 1.0f, 2.0f, 1.0f };
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, Light_Diffuse);
 	glLightfv(GL_LIGHT0, GL_POSITION, Light_Position);
-
-	GLfloat Light_Diffuse1[] = { 1.0f,1.0f,0.5f,1.0f };
-	GLfloat Light_Position1[] = { 0.0f, 0.0f, -1.0f, 1.0f };
+	glLightfv(GL_LIGHT0, GL_AMBIENT, Light_Ambient);
+	
+	//GLfloat Light_Ambient1[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+	GLfloat Light_Diffuse1[] = { 1.0f,0.5f,0.0f,1.0f };
+	GLfloat Light_Position1[] = { 0.0f, 0.0f, 2.0f, 1.0f };
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, Light_Diffuse1);
 	glLightfv(GL_LIGHT1, GL_POSITION, Light_Position1);
+	//glLightfv(GL_LIGHT1, GL_AMBIENT, Light_Ambient1);
 }
 
 void Scene::handleInput(float dt)
@@ -116,19 +117,19 @@ void Scene::handleInput(float dt)
 			camera1.rotateZ(-30, dt);
 		}
 	if (input->getMouseX() > width/2) {
-		camera1.rotateY(30, dt);
+		camera1.rotateY(input->getMouseX() - width / 2, dt);
 	}
 	else
 		if (input->getMouseX() < width/2) {
-			camera1.rotateY(-30, dt);
+			camera1.rotateY(input->getMouseX() - width / 2, dt);
 		}
 	if (input->getMouseY() < height / 2) {
-		camera1.rotateX(30, dt);
+		camera1.rotateX((input->getMouseY() - height / 2)*(-1), dt);
 
 	}
 	else
 		if (input->getMouseY() > height / 2) {
-			camera1.rotateX(-30, dt);
+			camera1.rotateX((input->getMouseY() - height / 2)*(-1), dt);
 		}
 	if (input->isKeyDown('1')) {
 		cameraAngle = 1;
@@ -158,9 +159,11 @@ void Scene::update(float dt)
 	yavin4->update(dt);
 	son->setPosition(camera1.getPosition().x - 2.00, camera1.getPosition().y - 0.1, camera1.getPosition().z + 0.0);
 	skybox->update(camera1.getPosition().x, camera1.getPosition().y, camera1.getPosition().z);
-	GLfloat Light_Position1[] = { camera1.getPosition().x - 1.0f,camera1.getPosition().y, camera1.getPosition().z, 1.0f };
 	// Calculate FPS for output
+
+	
 	calculateFPS();
+	
 	
 
 }
@@ -184,13 +187,19 @@ void Scene::render() {
 			camera1.getUp().x, camera1.getUp().y, camera1.getUp().z);
 
 	}
-	//skyBos---
-	glEnable(GL_LIGHT2);
+	GLfloat Light_Position[] = {2.0f,3.0f,1.0f,1.0f};
+	glLightfv(GL_LIGHT0, GL_POSITION, Light_Position);
+	Light_Position[0] = camera1.getPosition().x;
+	Light_Position[1] = camera1.getPosition().y;
+	Light_Position[2] = camera1.getPosition().z;
+	glLightfv(GL_LIGHT1, GL_POSITION, Light_Position);
+
 	glEnable(GL_LIGHT1);
 	glDisable(GL_DEPTH_TEST);
 	skybox->render();
 	glEnable(GL_CULL_FACE);
 	yavin4->render();//planet
+	//yavin->render();//planet
 	yavin->render();//planet
 	son->render();
 	glEnable(GL_DEPTH_TEST);
@@ -199,15 +208,12 @@ void Scene::render() {
 	//skyBox ---
 
 	glEnable(GL_LIGHT0);
-
 	tie1->render();
 	tie2->render();
 	tie3->render();
 	xWing->render();
 	trench->render();
-	
 	glDisable(GL_LIGHT0);
-	glDisable(GL_LIGHT2);
 	// Render text, should be last object rendered.
 	renderTextOutput();
 	

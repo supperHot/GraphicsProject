@@ -77,5 +77,10 @@ void camera::rotateX(int speed, float dt) {
 	update();
 }
 
+Vector3 camera::getRotation() {
+	Vector3 rotation = (pitch, yaw, roll);
+	return rotation;
+}
+
 
 

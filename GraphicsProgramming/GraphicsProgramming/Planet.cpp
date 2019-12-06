@@ -24,8 +24,6 @@ void Planet::render() {
 	float textureIncriment = 1.0/quality;
 	float textureX = 0;
 	float textureY = 0;
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glDisable(GL_LIGHT0);
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -41,8 +39,6 @@ void Planet::render() {
 		latitude += segment1;
 	}
 	glEnd();
-	glEnable(GL_LIGHT0);
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	
 }
 void Planet::setPiont(float longitude, float latitude, float textureX, float textureY) {

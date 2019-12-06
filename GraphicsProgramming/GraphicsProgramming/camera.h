@@ -26,6 +26,7 @@ public:
 
 	Vector3 getPosition();
 	Vector3 getDirection();
+	Vector3 getRotation();
 	Vector3 getUp();
 	Vector3 realGetUp();
 };

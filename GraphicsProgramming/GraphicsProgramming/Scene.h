@@ -84,6 +84,10 @@ protected:
 	Skybox* skybox = &box;
 
 	int cameraAngle = 1;
+	float moveZ;
+	float moveX;
+	float moveY;
+	bool wireframe;
 };
 
 #endif

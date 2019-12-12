@@ -36,9 +36,9 @@ Scene::Scene(Input* in)
 	xWing->load("models/spaceship.obj", "models/spaceship.png");
 
 	tie1->setPosition(0, 0, 0);
-	tie2->setPosition(2, 0, 0);
-	tie3->setPosition(2, 2, 0);
-	xWing->setPosition(0, 2, 0);
+	tie2->setPosition(0, 0, 0);
+	tie3->setPosition(0, 0, 0);
+	xWing->setPosition(0, 0, 0);
 
 	yavin->setPosition(0, 0, 0);
 	yavin->setQuality(50);
@@ -71,81 +71,101 @@ Scene::Scene(Input* in)
 	glLightfv(GL_LIGHT0, GL_POSITION, Light_Position);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, Light_Ambient);
 	
-	//GLfloat Light_Ambient1[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 	GLfloat Light_Diffuse1[] = { 1.0f,0.5f,0.0f,1.0f };
 	GLfloat Light_Position1[] = { 0.0f, 0.0f, 2.0f, 1.0f };
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, Light_Diffuse1);
 	glLightfv(GL_LIGHT1, GL_POSITION, Light_Position1);
-	//glLightfv(GL_LIGHT1, GL_AMBIENT, Light_Ambient1);
 }
 
 void Scene::handleInput(float dt)
 {
 	//moving the camera (the else is to stop you moving in opppiste dircetions at the same time)
 	
+	if (cameraAngle == 1) {
+		if (input->isKeyDown('w')) {
+			camera1.moveForward(30, dt);
+		}
+		else
+			if (input->isKeyDown('s')) {
+				camera1.moveForward(-30, dt);
+			}
 
-	if (input->isKeyDown('w')) {
-		camera1.moveForward(30,dt);
-	}
-	else
-		if (input->isKeyDown('s')) {
-			camera1.moveForward(-30, dt);
+		//---
+		if (input->isKeyDown('a')) {
+			camera1.strafeRight(-10, dt);
 		}
-	
-	//---
-	if (input->isKeyDown('a')) {
-		camera1.strafeRight(-10, dt);
-	}
-	else
-		if (input->isKeyDown('d')) {
-			camera1.strafeRight(10, dt);
+		else
+			if (input->isKeyDown('d')) {
+				camera1.strafeRight(10, dt);
+			}
+		//---
+		if (input->isKeyDown('n')) {
+			camera1.flyUp(-10, dt);
 		}
-	//---
-	if (input->isKeyDown('n')) {
-		camera1.flyUp(-10, dt);
-	}
-	else
-		if (input->isKeyDown('m')) {
-			camera1.flyUp(10, dt);
+		else
+			if (input->isKeyDown('m')) {
+				camera1.flyUp(10, dt);
+			}
+		//---
+		if (input->isKeyDown('e')) {
+			camera1.rotateZ(30, dt);
 		}
-	//---
-	if (input->isKeyDown('e')) {
-		camera1.rotateZ(30, dt);
-	}
-	else
-		if (input->isKeyDown('q')) {
-			camera1.rotateZ(-30, dt);
-		}
-	if (input->getMouseX() > width/2) {
-		camera1.rotateY(input->getMouseX() - width / 2, dt);
-	}
-	else
-		if (input->getMouseX() < width/2) {
+		else
+			if (input->isKeyDown('q')) {
+				camera1.rotateZ(-30, dt);
+			}
+		if (input->getMouseX() > width / 2) {
 			camera1.rotateY(input->getMouseX() - width / 2, dt);
 		}
-	if (input->getMouseY() < height / 2) {
-		camera1.rotateX((input->getMouseY() - height / 2)*(-1), dt);
+		else
+			if (input->getMouseX() < width / 2) {
+				camera1.rotateY(input->getMouseX() - width / 2, dt);
+			}
+		if (input->getMouseY() < height / 2) {
+			camera1.rotateX((input->getMouseY() - height / 2) * (-1), dt);
 
-	}
-	else
-		if (input->getMouseY() > height / 2) {
-			camera1.rotateX((input->getMouseY() - height / 2)*(-1), dt);
 		}
-	if (input->isKeyDown('1')) {
-		cameraAngle = 1;
+		else
+			if (input->getMouseY() > height / 2) {
+				camera1.rotateX((input->getMouseY() - height / 2) * (-1), dt);
+			}
 	}
-	if (input->isKeyDown('2')) {
-		cameraAngle = 2;
-	}
-	if (input->isKeyDown('3')) {
-		cameraAngle = 3;
-	}
-	if (input->isKeyDown('4')) {
-		cameraAngle = 4;
-	}
-	if (input->isKeyDown('5')) {
-		cameraAngle = 5;
-	}
+		if (input->isKeyDown('1')) {
+			cameraAngle = 1;
+		}
+		if (input->isKeyDown('2')) {
+			cameraAngle = 2;
+		}
+		if (input->isKeyDown('3')) {
+			cameraAngle = 3;
+		}
+		if (input->isKeyDown('4')) {
+			cameraAngle = 4;
+		}
+		if (input->isKeyDown('5')) {
+			cameraAngle = 5;
+		}
+		if (input->isKeyDown('f')) {
+			input->SetKeyUp('f');
+			if (wireframe) {
+				wireframe = false;
+			}
+			else {
+				wireframe = true;
+			}
+		}
+		if (input->isKeyDown('i')) {
+			moveY += 1 * dt;
+		}
+		else if (input->isKeyDown('k')) {
+			moveY += -1 * dt;
+		}
+		if (input->isKeyDown('j')) {
+			moveX += 1 * dt;
+		}
+		else if (input->isKeyDown('l')) {
+			moveX += -1 * dt;
+		}
 }
 
 void Scene::update(float dt)
@@ -160,10 +180,16 @@ void Scene::update(float dt)
 	son->setPosition(camera1.getPosition().x - 2.00, camera1.getPosition().y - 0.1, camera1.getPosition().z + 0.0);
 	skybox->update(camera1.getPosition().x, camera1.getPosition().y, camera1.getPosition().z);
 	// Calculate FPS for output
-
+	//tie1->update(dt);
+	//tie2->update(dt);
+	//tie3->update(dt);
+	//xWing->update(dt);
 	
 	calculateFPS();
-	
+	moveZ += 5 * dt;
+	if (moveZ > 100) {
+		moveZ = 0;
+	}
 	
 
 }
@@ -182,11 +208,18 @@ void Scene::render() {
 			camera1.getUp().x, camera1.getUp().y, camera1.getUp().z);
 		break;
 		case 2:
-		gluLookAt(camera1.getPosition().x, camera1.getPosition().y, camera1.getPosition().z,
-			camera1.getDirection().x, camera1.getDirection().y, camera1.getDirection().z,
-			camera1.getUp().x, camera1.getUp().y, camera1.getUp().z);
+		gluLookAt(0.9, 0.1, moveZ,
+			1.2, 1, moveZ-1,
+			0, 1, 0);
+		break;
+		case 3:
+		gluLookAt(1.5, 1.5, moveZ - 5,
+			1.5, 1.5, moveZ,
+			0, 1, 0);
+		break;
+	}//these are our differemt camera views
 
-	}
+
 	GLfloat Light_Position[] = {2.0f,3.0f,1.0f,1.0f};
 	glLightfv(GL_LIGHT0, GL_POSITION, Light_Position);
 	Light_Position[0] = camera1.getPosition().x;
@@ -194,12 +227,14 @@ void Scene::render() {
 	Light_Position[2] = camera1.getPosition().z;
 	glLightfv(GL_LIGHT1, GL_POSITION, Light_Position);
 
+	if (wireframe) {
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	}
 	glEnable(GL_LIGHT1);
 	glDisable(GL_DEPTH_TEST);
 	skybox->render();
 	glEnable(GL_CULL_FACE);
 	yavin4->render();//planet
-	//yavin->render();//planet
 	yavin->render();//planet
 	son->render();
 	glEnable(GL_DEPTH_TEST);
@@ -208,12 +243,24 @@ void Scene::render() {
 	//skyBox ---
 
 	glEnable(GL_LIGHT0);
-	tie1->render();
-	tie2->render();
-	tie3->render();
-	xWing->render();
+	glPushMatrix();//push so we only move the fighers
+		glRotatef(180, 0, 1, 0);//I rotated them so they face forwards
+		glTranslatef(moveX -3, moveY, -moveZ);
+		xWing->render();
+			glPushMatrix();//this is so the other ships follow the one behind
+				glTranslatef(1, 1, 2);
+				tie1->render();
+				glTranslatef(-1, 0, 0);
+				tie2->render();
+				glTranslatef(-1, 0, 0);
+				tie3->render();
+			glPopMatrix();
+	glPopMatrix();
 	trench->render();
 	glDisable(GL_LIGHT0);
+	if (wireframe) {
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	}
 	// Render text, should be last object rendered.
 	renderTextOutput();
 	

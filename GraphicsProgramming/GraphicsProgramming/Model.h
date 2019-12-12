@@ -26,7 +26,7 @@ public:
 	void render();
 	void setPosition(float,float,float);
 	
-private:
+protected:
 	
 	Vector3 postition = (0, 0, 0);
 	void loadTexture(char*);

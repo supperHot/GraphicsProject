@@ -3,6 +3,10 @@
 class Ship :
 	public model
 {
-	Vector3 postion;
+protected:
+
+public:
+	Vector3 getPosition();
+	void update(float);
 };
 

@@ -1,18 +1,20 @@
-﻿  Scene.cpp
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\model.h(31,27): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\camera.h(6,26): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(47,21): warning C4305:  'argument': truncation from 'double' to 'float'
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(52,24): warning C4305:  'argument': truncation from 'double' to 'float'
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(54,23): warning C4305:  'argument': truncation from 'double' to 'float'
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(58,21): warning C4305:  'argument': truncation from 'double' to 'float'
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(156,108): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(156,77): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(156,45): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(158,109): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(158,78): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(158,46): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(160,106): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(160,75): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-\\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(160,43): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
-  GraphicsProgramming.vcxproj -> \\StuHomeEven\HomeDrive4$\1801034\CMP 203\GraphicsProject\GraphicsProgramming\Debug\GraphicsProgramming.exe
+﻿  Input.cpp
+  Scene.cpp
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\model.h(31,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\camera.h(6,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(47,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(52,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(54,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(58,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(176,108): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(176,77): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(176,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(178,109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(178,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(178,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,106): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  GraphicsProgramming.vcxproj -> C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\Debug\GraphicsProgramming.exe

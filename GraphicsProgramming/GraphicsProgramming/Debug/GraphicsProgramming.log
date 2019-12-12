@@ -1,5 +1,4 @@
-﻿  Input.cpp
-  Scene.cpp
+﻿  Scene.cpp
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\model.h(31,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\camera.h(6,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Planet.h(18,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -15,6 +14,5 @@ C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsPro
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(178,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,106): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
 C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\GraphicsProgramming\Scene.cpp(180,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   GraphicsProgramming.vcxproj -> C:\Users\Fergus\Documents\GitHub\GraphicsProject\GraphicsProgramming\Debug\GraphicsProgramming.exe

@@ -50,7 +50,7 @@ Scene::Scene(Input* in)
 	yavin4->setPosition(0, 0, 0);
 	yavin4->setQuality(20);
 	yavin4->setRadius(0.05);
-	yavin4->load("gfx/yavin4.png");
+	yavin4->load("gfx/yavin4.jpg");
 	yavin4->setSpeed(0.05);
 
 	son->setPosition(0, 0, 0);
